@@ -41,6 +41,16 @@ async function main() {
     let rotX = 0.0, rotY = 0.0, rotZ = 0.0;
     let scale = 1.0;
 
+    // Allow URL params to override initial state for screenshots
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('tx')) tx = parseFloat(urlParams.get('tx'));
+    if (urlParams.has('ty')) ty = parseFloat(urlParams.get('ty'));
+    if (urlParams.has('tz')) tz = parseFloat(urlParams.get('tz'));
+    if (urlParams.has('rotX')) rotX = parseFloat(urlParams.get('rotX'));
+    if (urlParams.has('rotY')) rotY = parseFloat(urlParams.get('rotY'));
+    if (urlParams.has('rotZ')) rotZ = parseFloat(urlParams.get('rotZ'));
+    if (urlParams.has('scale')) scale = parseFloat(urlParams.get('scale'));
+
     const transStep = 0.2;
     const rotStep = 5.0;
     const scaleStep = 0.1;
