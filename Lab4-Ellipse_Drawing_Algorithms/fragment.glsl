@@ -2,5 +2,5 @@
 precision mediump float;
 void main() {
     // Set each point's fragment color (RGBA):
-    gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);  // white color
+    gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);  // red color
 }
